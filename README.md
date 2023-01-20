@@ -26,13 +26,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map creates a new array with the results of calling the provided function on every item in the array. This means that it loops through an array and performs a function on each item. A use case for this could be if you had an array of objects with names, and you wanted to create a new array just of the names, you could map the item to item.name in a new array.
+
+.reduce returns a single value after looping through the elements of an array.  A use case could be looping through an array of objects with weights and returning a single value that is the total weight for all objects.
+
+.filter uses a boolean value to create a subset of the array in which the provided function returns true.  So if it runs an element from the array through the function and the result is 'true', that element is added to the new array. A use case for this could be filtering an array of names to only include names that start with 'B'.
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function takes a function as an argument whereas a callback function is a function that is passed into another function as an argument.
 
 3. Explain what a closure is.
 
+A closure is the combination of a function and the lexical environment within which that function was declared. So a closure allows a function to have access to outer scopes, but not inner scopes.
+
 4. Describe the four principles of the 'this' keyword.
 
+Global: In the browser this refers to the window object. 
+Implicit: When a dot is used to invoke a function, whatever is left of the dot becomes 'this'
+New: when a constructor function is used, the this keyword refers to the new instance of the object that is being created.
+Explicit: When call(), apply(), or bind() are used this creates an explicit binding
+
 5. Why do we need super() in an extended class?
+
+super() calls a parent class's constructor and binds the fields to the extended class. This duplicates the properties of the parent class into the extended class. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
